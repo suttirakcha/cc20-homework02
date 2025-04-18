@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+* {
+  font-family:'Nunito Sans', sans-serif;
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body {
+  background-image:url('./assets/pexels.webp');
+  background-size:cover;
+}
+
+.container {
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  padding:20px 40px;
+  color:white;
+  max-width:1500px;
+  margin:auto;
+}
+
+header {
+  display:flex;
+  justify-content:flex-end;
+}
+
+header a {
+  opacity:.75;
+  transition:opacity .1s;
+}
+
+header a:hover {
+  opacity:1;
+}
+
+main {
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+footer {
+  border-top:1px solid white;
+  padding-top:12px;
+  text-align:center;
+}
+
+button {
+  background-color:transparent;
+  border:none;
+}
+
+header, 
+footer {
+  opacity:0;
+  visibility:hidden;
+}
+
+a {
+  text-decoration:none;
+  color:white;
+}
+
+.heading {
+  text-transform:uppercase;
+  font-weight:normal;
+  text-align:center;
+}
+
+h1.heading {
+  font-size:52px;
+  line-height:64px;
+  margin-bottom:20px;
+}
+
+h2.heading {
+  font-size:16px;
+  letter-spacing:3.6px;
+  margin-bottom:12px;
+}
+
+.loading-bar {
+  width:400px;
+  height:12px;
+  background-color:white;
+  box-shadow:2px 8px 16px rgba(0,0,0,0.4);
+  display:flex;
+}
+
+.inner-loading-bar {
+  height:100%;
+  background-color:lightblue;
+  display:inline-flex;
+  animation:loadingBarAnim 2s forwards;
+}
+
+.loading-percents {
+  display:flex;
+  width:100%;
+  justify-content:space-between;
+  margin-top:4px;
+  font-size:14px;
+}
+
+.btn {
+  padding:10px 24px;
+  background-color:lightblue;
+  border:none;
+  letter-spacing:1.2px;
+  width:fit-content;
+  cursor:pointer;
+}
+
+.btn-group {
+  margin-top:20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:20px;
+}
+
+.social-btns {
+  display:flex;
+  gap:8px;
+}
+
+.social-btns button {
+  border-radius:9999px;
+  border:1px solid white;
+  color:white;
+  width:40px;
+  height:40px;
+  font-size:24px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+    visibility:hidden;
+  }
+  100% {
+    opacity:1;
+    visibility:visible;
+  }
+}
+
+@keyframes fadeInTwo {
+  0% {
+    opacity:0;
+    visibility:hidden;
+  }
+  100% {
+    opacity:0.5;
+    visibility:visible;
+  }
+}
+
+@keyframes loadingBarAnim {
+  from {
+    width:0%;
+  }
+  to {
+    width:80%;
+  }
+}
+
+
+.fade1 {
+  animation:fadeIn 1s ease-out forwards;
+}
+
+.fade2 {
+  animation:fadeInTwo 1s ease-out forwards;
+}
+
+.delay {
+  animation-delay:.5s;
+}
