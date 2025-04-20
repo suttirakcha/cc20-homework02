@@ -113,6 +113,7 @@ h2.heading {
   letter-spacing:1.2px;
   width:fit-content;
   cursor:pointer;
+  transition:background-color .2s, color .2s;
 }
 
 .btn-group {
@@ -136,6 +137,14 @@ h2.heading {
   width:40px;
   height:40px;
   font-size:24px;
+  cursor:pointer;
+  transition:background-color .2s, color .2s;
+}
+
+.social-btns button:hover,
+.btn:hover {
+  background-color:white;
+  color:#303030;
 }
 
 @keyframes fadeIn {
